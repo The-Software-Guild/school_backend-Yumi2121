@@ -1,0 +1,633 @@
+<!-- <h2>Code Assignments</h2> -->
+<div id="book-page">
+  <p>
+    The mandatory code assignments will include starter code that you will work
+    with to complete the assignment. This means that the repository will include
+    code that you will update, based on the instructions provided.
+  </p>
+  <p>
+    For each assignment, take time to read all instructions and requirements
+    provided for the assignment. If there are instructions that you do not
+    understand, contact an instructor or teaching assistant for clarification.
+  </p>
+  <p>
+    Once you understand what is expected, take time to plan out the code, using
+    flowcharts, pseudocode, class diagrams, or ERDs as appropriate for the
+    activity. This will help you define what you want the code to do and make
+    the time you spend writing code more efficient. You may be asked to provide
+    this documentation for some assignments.
+  </p>
+  <p>
+    When you start to code, write the code incrementally and run it after each
+    step. Running the code frequently will make it easier to identify and
+    pinpoint errors as you work and correct those errors before starting the
+    next increment of code.
+  </p>
+  <aside>
+    <h4>⚠ Important!</h4>
+    <p>
+      Each GitHub Classroom code assignment will contain at least one file. Do
+      not change or delete any existing files unless instructed to do so.
+    </p>
+    <p>
+      Where you are expected to change an existing file, the assignment
+      instructions will clearly state which file or files you are expected to
+      update.
+    </p>
+  </aside>
+  <p>
+    Click the link provided by the instructor or in the assignment instruction
+    and authorize GitHub Classroom to access your account, if prompted to do so.
+  </p>
+  <p>GitHub Classroom will then prompt you to accept the assignment.</p>
+  <figure>
+    <img
+      class="img-fluid vert hor"
+      src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/stud-classroom-02.png"
+      referrerpolicy="no-referrer"
+      alt="github page to accept the assignment"
+    />
+  </figure>
+  <p>
+    Click the button to accept the assignment and then wait for the repo to be
+    configured. This process typically takes 2–3 minutes.
+  </p>
+  <figure>
+    <img
+      class="img-fluid vert hor"
+      src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/stud-classroom-03.png"
+      referrerpolicy="no-referrer"
+    />
+  </figure>
+  <p>
+    After a couple of minutes, refresh the page to check the status, using the
+    Refresh button in the browser toolbar or a shortcut key like Ctrl-R. When
+    the repository is ready, you will see a link to the new repository.
+  </p>
+  <figure>
+    <img
+      class="img-fluid vert hor"
+      src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/stud-classroom-04.png"
+      referrerpolicy="no-referrer"
+      alt="You're ready to go page with repository link"
+    />
+  </figure>
+  <p>
+    The link is unique to your account and should include your GitHub username
+    at the end of the URL.
+  </p>
+  <p>Click the link to open the repository and view the starter files.</p>
+  <figure>
+    <img
+      class="img-fluid vert hor"
+      src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/stud-classroom-05.png"
+      referrerpolicy="no-referrer"
+      alt="github classroom repository"
+    />
+  </figure>
+  <p>
+    Clone the repository to a local folder. Instructions for cloning a
+    repository are provided elsewhere in this course.
+  </p>
+  <p>
+    Once the repository has been cloned to your computer, open the project
+    folder in your preferred IDE (such as NetBeans or IntelliJ). Take time to
+    examine the existing files, but do not change any file except as specified
+    in the assignment instructions.
+  </p>
+  <p>
+    You are encouraged to commit frequently as you work on the assignment. Each
+    time you commit, use a commit message like <em>commit1</em>,
+    <em>commit2</em>, <em>commit3</em>, etc., incrementing as you go. The number
+    of commits is not important, and there is no maximum number of allowed
+    commits.
+  </p>
+  <h3>Checking Your Work</h3>
+  <p>
+    The code assignments that start with a template repository include unit
+    tests that will check your code each time you commit the code. The exact
+    number of tests depends on the complexity of the program, but they will
+    usually range between 3-5 tests.
+  </p>
+  <aside>
+    <p style="text-align: center">
+      ⚠ Your code must pass all tests by the specified due date and time for you
+      to receive credit for your work.
+    </p>
+  </aside>
+  <p>You can run the tests in two different ways:</p>
+  <ol>
+    <li>
+      Use your IDE (NetBeans or IntelliJ) to run the unit tests in the IDE.
+    </li>
+    <li>Push updates to the code to GitHub.</li>
+  </ol>
+  <p>
+    Failing tests will not count against you during the development process. You
+    are encouraged to run tests frequently to check your progress, and it is
+    expected that tests will fail until you complete all parts of the
+    assignment.
+  </p>
+
+  <p>
+    This lesson shows a few options for running these tests and viewing the
+    results.
+    <strong>These are not the only ways to complete this task!</strong> If you
+    are already familiar with another way to run and check unit tests, you are
+    welcome to use that process instead of using the steps shown here.
+  </p>
+  <p>Select your IDE to see details on how to run the unit tests.</p>
+  <div id="myGroup">
+    <p>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-toggle="collapse"
+        data-target="#netbeans"
+        aria-expanded="false"
+        aria-controls="netbeans"
+      >
+        NetBeans
+      </button>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-toggle="collapse"
+        data-target="#intellij"
+        aria-expanded="false"
+        aria-controls="intellij"
+      >
+        IntelliJ
+      </button>
+    </p>
+    <div class="collapse" id="netbeans" data-parent="#myGroup">
+      <div class="card card-body">
+        <div style="display: flex; align-items: flex-start">
+          <h3 style="display: inline">NetBeans</h3>
+          <!--Change from <h4> to <h3> for larger text-size.-->
+          <!--Close Button of the Card Body below; aligned to header-->
+          <button
+            style="width: 2em; margin-left: auto"
+            type="button"
+            class="btn-close"
+            data-toggle="collapse"
+            data-target="#netbeans"
+            aria-expanded="true"
+            aria-controls="netbeans"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <h5>Open the Project</h5>
+        <p>Open the project folder in NetBeans.</p>
+        <figure>
+          <a
+            href="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/netbeans-tests-01.png"
+            target="_blank"
+            ><img
+              class="img-fluid vert hor"
+              src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/netbeans-tests-01.png"
+              referrerpolicy="no-referrer"
+              alt="project open in netbeans"
+          /></a>
+        </figure>
+        <h5>Build the Project</h5>
+        <p>
+          Build the project as soon as it opens. This will add in all of the
+          dependencies identified by Maven and run all tests included in the
+          project. The tests will fail at this point, but it gives you a
+          starting point to work from.
+        </p>
+        <aside>
+          <h4>⚠ Important</h4>
+          <p>
+            The starter code should run without errors. If the initial build
+            reports errors in the code (except for failing tests), contact an
+            instructor or teaching assistant immediately.
+          </p>
+        </aside>
+        <p>
+          After the project has been built, you can view the test results in the
+          Navigator pane at the bottom of the window, on the Output tab.
+        </p>
+        <figure>
+          <a
+            href="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/netbeans-tests-02.png"
+            target="_blank"
+            ><img
+              class="img-fluid vert hor"
+              src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/netbeans-tests-02.png"
+              referrerpolicy="no-referrer"
+              alt="navigator pane in netbeans"
+          /></a>
+        </figure>
+        <!-- html for long description -->
+        <div class="longdesc">
+          <a href="#enddesc1">Skip long description</a>
+          <p>Output pane contains the text:</p>
+          <pre><code>Running com.example.EmployeeSalaryCalculatorTest
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.048 s &lt;&lt;&lt; FAILURE! - in com.example.EmployeeSalaryCalculatorTest
+com.example.EmployeeSalaryCalculatorTest.testSalaryCalculator1  Time elapsed: 0.048 s  &lt;&lt;&lt; FAILURE!
+            </code></pre>
+        </div>
+        <p>
+          In this example, there is a main test file
+          (<code>EmployeeSalaryCalculatorTest</code>) and two separate tests:
+          <code>testSalaryCalculator</code> and
+          <code>testSalaryCalculator1</code>.
+        </p>
+        <p>
+          We can tell that the tests failed by the statement: "Tests run: 2,
+          Failures: 2."
+        </p>
+        <p>
+          We can find out more about the test results by scrolling down in the
+          Output pane:
+        </p>
+        <figure>
+          <a
+            href="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/netbeans-tests-03.png"
+            target="_blank"
+            ><img
+              src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/netbeans-tests-03.png"
+              referrerpolicy="no-referrer"
+              alt="test results; relevant text follows"
+          /></a>
+        </figure>
+        <p></p>
+        <p>In this case, the output reads:</p>
+        <figure>
+          <pre class="prettyprint nocode"><code>Results:
+
+Failures:
+EmployeeSalaryCalculatorTest.testSalaryCalculator:15 expected: &lt;54000&gt; but was: &lt;0&gt;
+EmployeeSalaryCalculatorTest.testSalaryCalculator1:23 expected: &lt;114000&gt; but was: &lt;0&gt;
+
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0</code></pre>
+        </figure>
+        <h5>Open the File to Edit</h5>
+        <p>
+          Review the instructions and find the file the instructions tell you to
+          modify. In this example, we are using the
+          <strong
+            >EmployeeSalaryCalculator / src / main /
+            EmployeeSalaryCalculator.java</strong
+          >
+          file.
+        </p>
+        <p>
+          Open the file in NetBeans and find the code placeholders provided.
+          Remember that you should not change any existing code and that all new
+          code should be inside the placeholders provided.
+        </p>
+        <figure>
+          <a
+            href="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/netbeans-tests-04.png"
+            target="_blank"
+            ><img
+              class="img-fluid vert hor"
+              src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/netbeans-tests-04.png"
+              referrerpolicy="no-referrer"
+              alt="placeholders for code; long description below"
+          /></a>
+        </figure>
+        <!-- html for long description. This text will not appear in the published page.-->
+        <div class="longdesc">
+          <a href="#enddesc1">Skip long description</a>
+          <p>Code in screenshot includes:</p>
+          <pre><code>static int SalaryCalculator(int HW,int HR)
+{
+HourlyRate = HR;
+HoursWorked = HW;
+
+/*
+All new code must be added between the commented lines below.
+  YOUR CODE STARTS HERE
+  YOUR CODE ENDS HERE
+Test cases execute automtically each time you commit code.
+You must follow these rules:
+  1. Do not change any code outside of the new code placeholders.
+  2. Your own code must be inside the new code placeholders.
+  3. Do not change existing class names, interface names, method signatures, or attributes.
+  4. Follow standard Java naming conventions for all code that you write.
+*/
+
+
+    if(HW &lt;= StandardWorkingHours)
+    {
+      //YOUR CODE STARTS HERE
+
+
+      //YOUR CODE ENDS HERE
+    }
+    else
+    {
+      //YOUR CODE STARTS HERE
+
+
+
+      //YOUR CODE ENDS HERE
+    }
+    return GrossSalary;
+}</code></pre>
+          <p id="enddesc1">End long description</p>
+        </div>
+        <p>
+          In this example, the assignment asks us to add code to the if-else
+          block. We'll start with the if clause.
+        </p>
+        <p>Review the existing variables already declared in the class:</p>
+        <figure>
+          <pre
+            class="prettyprint lang-java"
+          ><code>final static int StandardWorkingHours = 40;
+static String EmployeeID;
+static String EmployeeName;
+static int HoursWorked;
+static int HourlyRate;
+static int BasicPay;
+static int OverTime;
+static int OverTimeRate;
+static int OverTimePay;
+static int GrossSalary;</code></pre>
+        </figure>
+        <p>
+          Because these variables already exist, we can use them in the methods
+          without having to redeclare them.
+        </p>
+        <p>
+          We want to calculate the total salary by multiplying the number of
+          hours worked (HW) by the hourly rate (HR). We can write an equation
+          for that. Note that the existing method
+          (<code>SalaryCalculator</code>) returns the variable
+          <code>GrossSalary</code>, so we want to be sure that the result is
+          saved to <code>GrossSalary</code>.
+        </p>
+        <figure>
+          <pre
+            class="prettyprint lang-java"
+          ><code>if(HW &lt;= StandardWorkingHours)
+{
+  //YOUR CODE STARTS HERE
+  <mark>GrossSalary = HoursWorked * HourlyRate;</mark>
+
+  //YOUR CODE ENDS HERE
+}
+else
+{
+  //YOUR CODE STARTS HERE
+
+
+
+  //YOUR CODE ENDS HERE
+}
+return GrossSalary;</code></pre>
+        </figure>
+        <p>
+          After updating the code, build the program again. This will check for
+          errors in the code as well as run the tests again.
+        </p>
+        <p>
+          Assuming that the code is correct for the if block, we see that only
+          one of the two tests failed:
+        </p>
+        <figure>
+          <a
+            href="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/netbeans-tests-05.png"
+            target="_blank"
+            ><img
+              class="img-fluid vert hor"
+              src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/netbeans-tests-05.png"
+              referrerpolicy="no-referrer"
+              alt="test results in output pane: Tests run: 2, Failures: 1, Errors: 0, Skipped: 0"
+          /></a>
+        </figure>
+        <p>
+          After verifying that the first test passes, use a similar approach to
+          add code that passes the other tests.
+        </p>
+        <aside>
+          <p>
+            ⚠ Remember that <strong>all tests</strong> must pass to receive
+            credit for the assignment.
+          </p>
+        </aside>
+        <!-- end netbeans instructions -->
+      </div>
+    </div>
+    <div class="collapse" id="intellij" data-parent="#myGroup">
+      <div class="card card-body">
+        <div style="display: flex; align-items: flex-start">
+          <h3>IntelliJ</h3>
+          <!--Change from <h4> to <h3> for larger text-size.-->
+          <!--Close Button of the Card Body below; aligned to header-->
+          <button
+            style="width: 2em; margin-left: auto"
+            type="button"
+            class="btn-close"
+            data-toggle="collapse"
+            data-target="#intellij"
+            aria-expanded="true"
+            aria-controls="intellij"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <h5>Open the Project</h5>
+        <p>Open the project folder in IntelliJ.</p>
+        <figure>
+          <a
+            href="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-01.png"
+            target="_blank"
+            ><img
+              class="img-fluid vert hor"
+              src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-01.png"
+              referrerpolicy="no-referrer"
+              alt="default view of project in intellij"
+          /></a>
+        </figure>
+        <h5>Build the Project</h5>
+        <p>
+          Build the project to update the Maven repositories and check for any
+          errors in the code.
+        </p>
+        <aside>
+          <h4>⚠ Important</h4>
+          <p>
+            The starter code should compile without errors. If the initial build
+            reports errors in the code (except for failing tests), contact an
+            instructor or teaching assistant immediately.
+          </p>
+        </aside>
+        <p>
+          After building the code, run the code. IntelliJ will automatically run
+          the tests that are included with the starter code, and the results of
+          the tests will appear.
+        </p>
+        <figure>
+          <a
+            href="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-02.png"
+            target="_blank"
+            ><img
+              class="img-fluid vert hor"
+              src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-02.png"
+              referrerpolicy="no-referrer"
+              alt="tests pane in intellij"
+          /></a>
+        </figure>
+        <p>
+          Right-click the file and click Run 'EmployeeSalaryCalculatorTest'
+          (Ctrl+Shift+F10) in the context menu to run the tests.
+        </p>
+        <figure>
+          <a
+            href="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-03.png"
+            target="_blank"
+            ><img
+              class="img-fluid vert hor"
+              src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-03.png"
+              referrerpolicy="no-referrer"
+              alt="context menu"
+          /></a>
+        </figure>
+        <p>
+          The tests will run and the results will display in the bottom pane,
+          with the tests in the left window and details about the tests in the
+          right pane.
+        </p>
+        <figure>
+          <a
+            href="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-04.png"
+            target="_blank"
+            ><img
+              class="img-fluid vert hor"
+              src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-04.png"
+              referrerpolicy="no-referrer"
+              alt="tests pane"
+          /></a>
+        </figure>
+        <p>
+          The details include the name of the test file and the line number
+          where the test starts, along with what the resulting output should be
+          based on each test. This example includes a main test file
+          (<code>EmployeeSalaryCalculatorTest</code>) and two separate tests:
+          <code>testSalaryCalculator</code> and
+          <code>testSalaryCalculator1</code>. The status at the top of the pane
+          also reads "Tests failed: 2 of 2 tests."
+        </p>
+        <aside>
+          <p>There may be more than two tests in other assignments.</p>
+        </aside>
+        <h5>Open the File to Edit</h5>
+        <p>
+          Review the instructions and find the file the instructions tell you to
+          modify. In this example, we are using the
+          <strong
+            >EmployeeSalaryCalculator / src / main /
+            EmployeeSalaryCalculator.java</strong
+          >
+          file.
+        </p>
+        <p>
+          Open the file in IntelliJ and find the code placeholders provided.
+          Review the existing code to identify any variables or other code that
+          already exists and that you will need to use in your solution, but
+          remember that you should not change any existing code. All new code
+          should be inside the placeholders provided.
+        </p>
+        <figure>
+          <a
+            href="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-03.png"
+            target="_blank"
+            ><img
+              class="img-fluid vert hor"
+              src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-03.png"
+              referrerpolicy="no-referrer"
+              alt="screenshot of code placeholder"
+          /></a>
+        </figure>
+        <p>
+          In this example, the assignment asks us to add code to the if-else
+          block. We'll start with the if clause.
+        </p>
+        <p>Review the existing variables already declared in the class:</p>
+        <figure>
+          <pre
+            class="prettyprint lang-java"
+          ><code>final static int StandardWorkingHours = 40;
+static String EmployeeID;
+static String EmployeeName;
+static int HoursWorked;
+static int HourlyRate;
+static int BasicPay;
+static int OverTime;
+static int OverTimeRate;
+static int OverTimePay;
+static int GrossSalary;</code></pre>
+        </figure>
+        <p>
+          Because these variables already exist, we can use them in the methods
+          without having to redeclare them.
+        </p>
+        <p>
+          We want to calculate the total salary by multiplying the number of
+          hours worked (HW) by the hourly rate (HR). We can write an equation
+          for that. Note that the existing method
+          (<code>SalaryCalculator</code>) returns the variable
+          <code>GrossSalary</code>, so we want to be sure that the result is
+          saved to <code>GrossSalary</code>.
+        </p>
+        <figure>
+          <pre
+            class="prettyprint lang-java"
+          ><code>if(HW &lt;= StandardWorkingHours)
+{
+  //YOUR CODE STARTS HERE
+  <mark>GrossSalary = HoursWorked * HourlyRate;</mark>
+
+  //YOUR CODE ENDS HERE
+}
+else
+{
+  //YOUR CODE STARTS HERE
+
+
+
+  //YOUR CODE ENDS HERE
+}
+return GrossSalary;</code></pre>
+        </figure>
+        <p>
+          After updating the code, build the program again. This will check for
+          errors in the code as well as run the tests again. Assuming the code
+          is correct, the test panel will now show that one test passed and one
+          test failed.
+        </p>
+        <figure>
+          <a
+            href="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-05.png"
+            target="_blank"
+            ><img
+              class="img-fluid vert hor"
+              src="https://the-software-guild.s3.amazonaws.com/java-dev/2302-code-assessments/images/intellij-tests-05.png"
+              referrerpolicy="no-referrer"
+              alt="status shows 1 test failed and 1 test passed"
+          /></a>
+        </figure>
+        <p>
+          After verifying that the first test passes, use a similar approach to
+          add code that passes the next test, using a different placeholder for
+          new code.
+        </p>
+        <aside>
+          <p class="text-center">
+            ⚠ Remember that <strong>all tests</strong> must pass to receive
+            credit for the assignment.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
