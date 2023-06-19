@@ -17,8 +17,7 @@ public class CourseController {
     @GetMapping("/courses")
     public List<Course> getAllCourses() {
         //YOUR CODE STARTS HERE
-
-        return null;
+        return courseService.getAllCourses();
 
         //YOUR CODE ENDS HERE
     }
@@ -27,7 +26,7 @@ public class CourseController {
     public Course getCourseById(@PathVariable int id) {
         //YOUR CODE STARTS HERE
 
-        return null;
+        return courseService.getCourseById(id);
 
         //YOUR CODE ENDS HERE
     }
@@ -36,7 +35,7 @@ public class CourseController {
     public Course addCourse(@RequestBody Course course) {
         //YOUR CODE STARTS HERE
 
-        return null;
+        return courseService.addNewCourse(course);
 
         //YOUR CODE ENDS HERE
     }
@@ -45,7 +44,8 @@ public class CourseController {
     public Course updateCourse(@PathVariable int id, @RequestBody Course course) {
         //YOUR CODE STARTS HERE
 
-        return null;
+    	Course c = courseService.updateCourseData(id, course);
+    	return c;
 
         //YOUR CODE ENDS HERE
     }
@@ -54,7 +54,7 @@ public class CourseController {
     public void deleteCourse(@PathVariable int id) {
         //YOUR CODE STARTS HERE
 
-
+    	courseService.deleteCourseById(id);
 
         //YOUR CODE ENDS HERE
     }
