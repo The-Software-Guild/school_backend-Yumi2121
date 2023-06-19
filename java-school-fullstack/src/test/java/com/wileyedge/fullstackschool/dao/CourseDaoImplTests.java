@@ -60,7 +60,7 @@ public class CourseDaoImplTests {
         Course course = new Course();
         course.setCourseId(11);
         course.setCourseName("Fantasy Fictional Writing 444");
-        course.setCourseDesc("Guest Lecturer JK Rowling");
+        course.setCourseDesc("Guest Lecturer: JK Rowling");
         course.setTeacherId(11);
         courseDao.updateCourse(course);
         List<Course> newList = courseDao.getAllCourses();
