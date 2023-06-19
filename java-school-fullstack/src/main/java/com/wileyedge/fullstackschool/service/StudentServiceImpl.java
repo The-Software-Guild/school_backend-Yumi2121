@@ -61,8 +61,8 @@ public class StudentServiceImpl implements StudentServiceInterface {
     		return student;
     	}
     	
-    	Student student1 = studentDao.createNewStudent(student);
-        return student1;
+    	student = studentDao.createNewStudent(student);
+        return student;
 
         //YOUR CODE ENDS HERE
     }

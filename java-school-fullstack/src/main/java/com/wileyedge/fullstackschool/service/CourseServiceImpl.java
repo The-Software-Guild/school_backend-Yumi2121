@@ -58,8 +58,8 @@ public class CourseServiceImpl implements CourseServiceInterface {
     		return course;
     	}
     		
-    	Course course1 = courseDao.createNewCourse(course);
-        return course1;
+    	course = courseDao.createNewCourse(course);
+        return course;
 
         //YOUR CODE ENDS HERE
     }

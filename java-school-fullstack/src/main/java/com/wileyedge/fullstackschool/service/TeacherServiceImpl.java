@@ -49,17 +49,15 @@ public class TeacherServiceImpl implements TeacherServiceInterface {
 
     public Teacher addNewTeacher(Teacher teacher) {
         //YOUR CODE STARTS HERE
-    	Teacher teacher1 = new Teacher();
-    
     	
     	if (teacher.getTeacherFName().isBlank() || teacher.getTeacherLName().isBlank()){
-    		teacher1.setTeacherFName("First Name blank, teacher NOT added");
-    		teacher1.setTeacherLName("Last Name blank, teacher NOT added");
-    		return teacher1;
+    		teacher.setTeacherFName("First Name blank, teacher NOT added");
+    		teacher.setTeacherLName("Last Name blank, teacher NOT added");
+    		return teacher;
     	}
     	
-    	teacher1 = teacherDao.createNewTeacher(teacher);
-        return teacher1;
+    	teacher = teacherDao.createNewTeacher(teacher);
+        return teacher;
 
         //YOUR CODE ENDS HERE
     }
