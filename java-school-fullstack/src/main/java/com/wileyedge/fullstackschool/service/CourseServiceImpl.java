@@ -11,7 +11,6 @@ import java.util.List;
 public class CourseServiceImpl implements CourseServiceInterface {
 
     //YOUR CODE STARTS HERE
-	Course returnedCourse;
 	
     @Autowired
     CourseDao courseDao;
@@ -19,7 +18,7 @@ public class CourseServiceImpl implements CourseServiceInterface {
     @Autowired
     public CourseServiceImpl(CourseDao courseDao) {
         this.courseDao = courseDao;
-        this.returnedCourse = new Course();
+        
     }
    
 
@@ -51,32 +50,34 @@ public class CourseServiceImpl implements CourseServiceInterface {
 
     public Course addNewCourse(Course course) {
         //YOUR CODE STARTS HERE
-    	returnedCourse = course;
     	
-    	if (returnedCourse.getCourseName().equals("") ||returnedCourse.getCourseDesc().equals("")) {
-    		returnedCourse.setCourseName("Name blank, course NOT added");
-    		returnedCourse.setCourseDesc("Description blank, course NOT added");
-    		return returnedCourse;
+    	
+    	if (course.getCourseName().equals("") ||course.getCourseDesc().equals("")) {
+    		course.setCourseName("Name blank, course NOT added");
+    		course.setCourseDesc("Description blank, course NOT added");
+    		return course;
     	}
     		
-    	returnedCourse = courseDao.createNewCourse(course);
-        return returnedCourse;
+    	Course course1 = courseDao.createNewCourse(course);
+        return course1;
 
         //YOUR CODE ENDS HERE
     }
 
     public Course updateCourseData(int id, Course course) {
         //YOUR CODE STARTS HERE
+    	
     	if (id != course.getCourseId()) {
     		course.setCourseName("IDs do not match, course not updated");
     		course.setCourseDesc("IDs do not match, course not updated");
-    		
+    		return course;
     	} else {
     		courseDao.updateCourse(course);
+    		return course;
     	}
     	
  
-    	return course;
+    	
   
 
         //YOUR CODE ENDS HERE

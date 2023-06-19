@@ -49,32 +49,35 @@ public class TeacherServiceImpl implements TeacherServiceInterface {
 
     public Teacher addNewTeacher(Teacher teacher) {
         //YOUR CODE STARTS HERE
-    	Teacher returnedTeacher = new Teacher();
-    	returnedTeacher = teacher;
+    	Teacher teacher1 = new Teacher();
+    
     	
     	if (teacher.getTeacherFName().isBlank() || teacher.getTeacherLName().isBlank()){
-    		returnedTeacher.setTeacherFName("First Name blank, teacher NOT added");
-    		returnedTeacher.setTeacherLName("Last Name blank, teacher NOT added");
-    		return returnedTeacher;
+    		teacher1.setTeacherFName("First Name blank, teacher NOT added");
+    		teacher1.setTeacherLName("Last Name blank, teacher NOT added");
+    		return teacher1;
     	}
     	
-    	returnedTeacher = teacherDao.createNewTeacher(teacher);
-        return returnedTeacher;
+    	teacher1 = teacherDao.createNewTeacher(teacher);
+        return teacher1;
 
         //YOUR CODE ENDS HERE
     }
 
     public Teacher updateTeacherData(int id, Teacher teacher) {
         //YOUR CODE STARTS HERE
+    	
+    	
     	if (id != teacher.getTeacherId()) {
     		teacher.setTeacherFName("IDs do not match, teacher not updated");
     		teacher.setTeacherLName("IDs do not match, teacher not updated");
+    		return teacher;
     		
     	} else {
     		teacherDao.updateTeacher(teacher);
-    		
+    		return teacher;
     	}
-        return teacher;
+        
 
         //YOUR CODE ENDS HERE
     }
