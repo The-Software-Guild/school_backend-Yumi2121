@@ -11,14 +11,13 @@ import java.util.List;
 public class TeacherServiceImpl implements TeacherServiceInterface {
 
     //YOUR CODE STARTS HERE
-	Teacher returnedTeacher;
 	
     @Autowired
     TeacherDao teacherDao;
 
     public TeacherServiceImpl(TeacherDao teacherDao) {
         this.teacherDao = teacherDao;
-        this.returnedTeacher = new Teacher();
+       
     }
 
 
@@ -34,27 +33,27 @@ public class TeacherServiceImpl implements TeacherServiceInterface {
 
     public Teacher getTeacherById(int id) {
         //YOUR CODE STARTS HERE
+    	Teacher teacher = new Teacher();
     	
     	try {
-    		returnedTeacher = teacherDao.findTeacherById(id);
+    		teacher = teacherDao.findTeacherById(id);
     	} catch (DataAccessException e) {
-    		returnedTeacher.setTeacherFName("Teacher Not Found");
-    		returnedTeacher.setTeacherLName("Teacher Not Found");
+    		teacher.setTeacherFName("Teacher Not Found");
+    		teacher.setTeacherLName("Teacher Not Found");
     	}
     	
-        return returnedTeacher;
+        return teacher;
 
         //YOUR CODE ENDS HERE
     }
 
     public Teacher addNewTeacher(Teacher teacher) {
         //YOUR CODE STARTS HERE
+    	Teacher returnedTeacher = new Teacher();
     	returnedTeacher = teacher;
     	
-    	if (teacher.getTeacherFName().equals("")){
+    	if (teacher.getTeacherFName().isBlank() || teacher.getTeacherLName().isBlank()){
     		returnedTeacher.setTeacherFName("First Name blank, teacher NOT added");
-    		return returnedTeacher;
-    	} else if (teacher.getTeacherLName().equals("")) {
     		returnedTeacher.setTeacherLName("Last Name blank, teacher NOT added");
     		return returnedTeacher;
     	}
@@ -67,6 +66,7 @@ public class TeacherServiceImpl implements TeacherServiceInterface {
 
     public Teacher updateTeacherData(int id, Teacher teacher) {
         //YOUR CODE STARTS HERE
+    	Teacher returnedTeacher = new Teacher();
     	returnedTeacher = teacher;
     	
     	if (id == returnedTeacher.getTeacherId()) {
