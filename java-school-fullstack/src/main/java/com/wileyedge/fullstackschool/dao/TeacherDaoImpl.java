@@ -1,5 +1,6 @@
 package com.wileyedge.fullstackschool.dao;
 
+import com.wileyedge.fullstackschool.dao.mappers.StudentMapper;
 import com.wileyedge.fullstackschool.dao.mappers.TeacherMapper;
 import com.wileyedge.fullstackschool.model.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +24,9 @@ public class TeacherDaoImpl implements TeacherDao {
     @Override
     public Teacher createNewTeacher(Teacher teacher) {
         //YOUR CODE STARTS HERE
-
-        return null;
+    	String sql = "INSERT INTO teacher VALUES (?, ?, ?, ?)";
+    	jdbcTemplate.update(sql, teacher.getTeacherId(), teacher.getTeacherFName(), teacher.getTeacherLName(), teacher.getDept());
+        return teacher;
 
         //YOUR CODE ENDS HERE
     }
@@ -32,9 +34,9 @@ public class TeacherDaoImpl implements TeacherDao {
     @Override
     public List<Teacher> getAllTeachers() {
         //YOUR CODE STARTS HERE
-
-
-        return null;
+    	String sql = "select * from teacher";
+    	
+        return jdbcTemplate.query(sql, new TeacherMapper());
 
         //YOUR CODE ENDS HERE
     }
@@ -42,9 +44,10 @@ public class TeacherDaoImpl implements TeacherDao {
     @Override
     public Teacher findTeacherById(int id) {
         //YOUR CODE STARTS HERE
+    	String sql = "select * from student where tid=?";
+    	
+        return jdbcTemplate.queryForObject(sql, new Object[]{id}, new TeacherMapper());
 
-
-        return null;
 
         //YOUR CODE ENDS HERE
     }
@@ -52,7 +55,8 @@ public class TeacherDaoImpl implements TeacherDao {
     @Override
     public void updateTeacher(Teacher t) {
         //YOUR CODE STARTS HERE
-
+    	String sql = "update teacher set tFName=?, tLName=?, dept=? where tid=?";
+    	jdbcTemplate.update(sql, t.getTeacherId(), t.getTeacherFName(), t.getTeacherLName(), t.getDept());
 
 
         //YOUR CODE ENDS HERE
@@ -61,7 +65,8 @@ public class TeacherDaoImpl implements TeacherDao {
     @Override
     public void deleteTeacher(int id) {
         //YOUR CODE STARTS HERE
-
+    	String sql = "DELETE FROM teacher WHERE tid=?";
+    	jdbcTemplate.update(sql, new Object[] {id});
 
         //YOUR CODE ENDS HERE
     }
