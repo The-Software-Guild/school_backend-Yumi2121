@@ -66,17 +66,15 @@ public class TeacherServiceImpl implements TeacherServiceInterface {
 
     public Teacher updateTeacherData(int id, Teacher teacher) {
         //YOUR CODE STARTS HERE
-    	Teacher returnedTeacher = new Teacher();
-    	returnedTeacher = teacher;
-    	
-    	if (id == returnedTeacher.getTeacherId()) {
-    		teacherDao.updateTeacher(teacher);
+    	if (id != teacher.getTeacherId()) {
+    		teacher.setTeacherFName("IDs do not match, teacher not updated");
+    		teacher.setTeacherLName("IDs do not match, teacher not updated");
+    		
     	} else {
-    		returnedTeacher.setTeacherFName("IDs do not match, teacher not updated");
-    		returnedTeacher.setTeacherLName("IDs do not match, teacher not updated");
-    		return returnedTeacher;
+    		teacherDao.updateTeacher(teacher);
+    		
     	}
-        return returnedTeacher;
+        return teacher;
 
         //YOUR CODE ENDS HERE
     }
