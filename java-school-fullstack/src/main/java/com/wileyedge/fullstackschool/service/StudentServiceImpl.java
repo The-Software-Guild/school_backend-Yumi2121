@@ -72,15 +72,15 @@ public class StudentServiceImpl implements StudentServiceInterface {
     public Student updateStudentData(int id, Student student) {
         //YOUR CODE STARTS HERE
     	if (id != student.getStudentId()) {
-    		returnedStudent.setStudentFirstName("IDs do not match, student not updated");
-    		returnedStudent.setStudentLastName("IDs do not match, student not updated");
+    		student.setStudentFirstName("IDs do not match, student not updated");
+    		student.setStudentLastName("IDs do not match, student not updated");
+    		return student;
     		
     	} else {
     		studentDao.updateStudent(student);
+    		return student;
     		
     	}
-    	
-        return student;
 
         //YOUR CODE ENDS HERE
     }
