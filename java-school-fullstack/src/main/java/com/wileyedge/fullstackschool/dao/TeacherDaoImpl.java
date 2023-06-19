@@ -44,7 +44,7 @@ public class TeacherDaoImpl implements TeacherDao {
     @Override
     public Teacher findTeacherById(int id) {
         //YOUR CODE STARTS HERE
-    	String sql = "select * from student where tid=?";
+    	String sql = "select * from teacher where tid=?";
     	
         return jdbcTemplate.queryForObject(sql, new Object[]{id}, new TeacherMapper());
 
