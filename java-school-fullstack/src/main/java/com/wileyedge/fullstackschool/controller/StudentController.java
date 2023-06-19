@@ -43,7 +43,13 @@ public class StudentController {
     @PutMapping("/{id}")
     public Student updateStudent(@PathVariable int id, @RequestBody Student student) {
         //YOUR CODE STARTS HERE
-    	Student stu = studentServiceImpl.updateStudentData(id, student);
+    	
+    	Student stu = studentServiceImpl.getStudentById(id);
+    	
+    	stu.setStudentFirstName(student.getStudentFirstName());
+    	stu.setStudentLastName(student.getStudentLastName());
+    	studentServiceImpl.updateStudentData(id, student);
+    	
         return stu;
 
         //YOUR CODE ENDS HERE

@@ -43,8 +43,13 @@ public class CourseController {
     @PutMapping("/{id}")
     public Course updateCourse(@PathVariable int id, @RequestBody Course course) {
         //YOUR CODE STARTS HERE
-
-    	Course c = courseService.updateCourseData(id, course);
+    	Course c = courseService.getCourseById(id);
+    	
+    	c.setCourseName(course.getCourseName());
+    	c.setCourseDesc(course.getCourseDesc());
+    	c.setTeacherId(course.getTeacherId());
+ 
+    	courseService.updateCourseData(id, course);
     	return c;
 
         //YOUR CODE ENDS HERE

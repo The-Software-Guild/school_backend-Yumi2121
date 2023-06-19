@@ -44,7 +44,12 @@ public class TeacherController {
     @PutMapping("/{id}")
     public Teacher updateTeacher(@PathVariable int id, @RequestBody Teacher teacher) {
         //YOUR CODE STARTS HERE
-    	Teacher t = teacherServiceImpl.updateTeacherData(id, teacher);
+    	Teacher t = teacherServiceImpl.getTeacherById(id);
+    	
+    	t.setTeacherFName(teacher.getTeacherFName());
+    	t.setTeacherLName(teacher.getTeacherLName());
+    
+    	teacherServiceImpl.updateTeacherData(id, teacher);
         return t;
 
         //YOUR CODE ENDS HERE
