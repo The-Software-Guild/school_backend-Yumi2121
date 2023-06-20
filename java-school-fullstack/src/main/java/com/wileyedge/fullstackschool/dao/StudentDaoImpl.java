@@ -55,10 +55,11 @@ public class StudentDaoImpl implements StudentDao {
     }
 
     @Override
+    @Transactional
     public void updateStudent(Student student) {
         //YOUR CODE STARTS HERE
     	String sql = "update student set fName=?, lName=? where sid=?";
-    	jdbcTemplate.update(sql, student.getStudentId(), student.getStudentFirstName(), student.getStudentLastName());
+    	jdbcTemplate.update(sql, student.getStudentFirstName(), student.getStudentLastName(), student.getStudentId());
         //YOUR CODE ENDS HERE
     }
 
